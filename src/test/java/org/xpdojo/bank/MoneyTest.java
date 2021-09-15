@@ -9,7 +9,7 @@ class MoneyTest {
 
     @Test
     public void getAmount() {
-        Money money = new Money();
-        assertThat(money.amount).isEqualTo(0);
+        Money money = new Money(5);
+        assertThat(money.amount).isEqualTo(5);
     }
 }

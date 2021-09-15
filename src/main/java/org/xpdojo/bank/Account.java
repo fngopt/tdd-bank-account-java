@@ -2,8 +2,10 @@ package org.xpdojo.bank;
 import java.util.Vector;
 import java.lang.Integer;
 
+import org.xpdojo.bank.Money;
+
 public class Account {
-    Vector<Integer> deposits;
+    Vector<Money> deposits;
 
     Account()
     {
@@ -12,7 +14,7 @@ public class Account {
 
     void deposit(int amount)
     {
-        this.deposits.add(amount);
+        this.deposits.add(new Money(amount));
     }
 
     int getBalance()
@@ -22,9 +24,9 @@ public class Account {
             return 0;
         }
         int balance = 0;
-        for (Integer val : this.deposits)
+        for (Money val : this.deposits)
         {
-            balance += val;
+            balance += val.amount;
         }
         return balance;
     }
