@@ -22,4 +22,13 @@ public class AccountTest {
         assertThat(account.getBalance()).isEqualTo(10);
     }
 
+    @Test
+    public void testMultiDepositBalance() {
+        Account account = new Account();
+        account.deposit(10);
+        account.deposit(20);
+        account.deposit(30);
+        assertThat(account.getBalance()).isEqualTo(60);
+    }
+
 }
