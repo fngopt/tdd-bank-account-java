@@ -7,4 +7,9 @@ public class Account {
     {
         this.balance += amount;
     }
+
+    int getBalance()
+    {
+        return balance;
+    }
 }
